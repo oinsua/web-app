@@ -16,10 +16,9 @@ export const dataSlice = createSlice({
     initialState,
     reducers: {
         updateData: (state, action) => {
-            console.log('action: ', action)
             return action.payload;
         },
-        deleteData: (state, action) => {
+        deleteData: () => {
             return initialState;
         }
     },

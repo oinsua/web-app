@@ -4,8 +4,8 @@ import { getDataForm, initialState } from '../../features/dataForm/dataSlice';
 import { Tasks } from '../../model/Task';
 
 export enum actionButton {
-    CREATE = 'create',
-    UPDATE = 'update',
+    CREATE = 'Create',
+    UPDATE = 'Update',
 }
 
 export function useDataForm() {
@@ -18,7 +18,7 @@ export function useDataForm() {
             setTask(dataFormState);
             nameButton.current = actionButton.UPDATE;
         }
-    }, [dataFormState.id])
+    }, [dataFormState.id, dataFormState])
   return {
       task,
       setTask,
