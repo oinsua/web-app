@@ -1,4 +1,4 @@
-import { useAppDispatch } from '../../app/hooks';
+import { useAppDispatch } from '../../app/redux/hooks';
 import { updateData } from '../../features/dataForm/dataSlice';
 import { deleteTask } from '../../features/tasks/taskSlice';
 import { Tasks } from '../../model/Task';
