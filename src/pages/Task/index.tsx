@@ -1,13 +1,13 @@
-import React from 'react'
+import PageLayout from '../../components/PageLayout'
 import TaskForm from '../../components/TaskForm'
 import TaskList from '../../components/TaskList'
 
 function Task() {
   return (
-    <>
-    <TaskForm />
-    <TaskList />
-    </>
+    <PageLayout>
+      <TaskForm />
+      <TaskList />
+    </PageLayout>
   )
 }
 

@@ -1,8 +1,12 @@
 import React from 'react'
+import PageLayout from '../../components/PageLayout'
 
 function About() {
   return (
-    <div>About</div>
+    <PageLayout>
+        <div>About</div>
+    </PageLayout>
+    
   )
 }
 

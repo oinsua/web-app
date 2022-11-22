@@ -19,6 +19,9 @@ function NavBar() {
                 <NavLink to={GO_TO.TASK} className={styles.link}>Task</NavLink>
             </li>
             <li className={styles.li_list}>
+                <NavLink to={GO_TO.CONTACT} className={styles.link}>Contact</NavLink>
+            </li>
+            <li className={styles.li_list}>
                 <NavLink to={GO_TO.DASHBOARD} className={styles.link}>Dashboard</NavLink>
             </li>
         </ul>
