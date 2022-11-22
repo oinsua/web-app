@@ -1,6 +1,8 @@
 export enum GO_TO {
-    HOME = '/',
+    ROOT = '/',
+    HOME = '/home',
     TASK = '/task',
     ABOUT = '/about',
     DASHBOARD = '/dashboard',
+    CONTACT = '/contact',
 };

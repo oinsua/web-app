@@ -1,0 +1,17 @@
+.ul_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+.li_list { 
+    margin: .5rem;
+    padding: .5rem;
+}
+
+.link {
+    font-weight: 700;
+    color: whitesmoke;
+    text-decoration: none;
+}
