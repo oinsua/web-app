@@ -15,3 +15,8 @@
     color: whitesmoke;
     text-decoration: none;
 }
+
+.linkActive {
+    font-weight: 700;
+    color: whitesmoke;
+}
