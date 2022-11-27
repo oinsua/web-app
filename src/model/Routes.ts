@@ -7,5 +7,6 @@ export enum GO_TO {
     WHO = 'who',
     DASHBOARD = '/dashboard',
     CONTACT = '/contact',
+    ADMIN = '/admin',
     ERROR = '*',
 };

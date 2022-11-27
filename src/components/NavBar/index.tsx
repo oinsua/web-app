@@ -45,9 +45,26 @@ function NavBar() {
                                 <li className={styles.li_list}>
                                     <NavLink to={GO_TO.CONTACT} className={handleCss}>Contact</NavLink>
                                 </li>
-                                <li className={styles.li_list}>
-                                    <NavLink to={GO_TO.DASHBOARD} className={handleCss}>Dashboard</NavLink>
-                                </li>
+                                {
+                                    userRedux.permission.includes('analize' as never) && (
+                                    <li className={styles.li_list}>
+                                        <NavLink to={GO_TO.DASHBOARD} className={handleCss}>Dashboard</NavLink>
+                                    </li>
+                                    )
+                                }
+                                {
+                                    userRedux.rol.includes('admin' as never) && (
+                                        <>
+                                        <li className={styles.li_list}>
+                                            <NavLink to={GO_TO.DASHBOARD} className={handleCss}>Dashboard</NavLink>
+                                        </li>
+                                        <li className={styles.li_list}>
+                                                <NavLink to={GO_TO.ADMIN} className={handleCss}>Admin</NavLink>
+                                        </li>
+                                        </>
+                                    )
+                                }
+                                
                             </>
                     )
             }

@@ -14,8 +14,8 @@ function Login() {
         e.preventDefault();
         dispatch(addUser({
             name: 'oinsua',
-            permission: [],
-            rol: []
+            permission: [''],
+            rol: ['admin']
         }))
         navigate(GO_TO.HOME);
     };
