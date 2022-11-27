@@ -4,6 +4,7 @@ export enum GO_TO {
     TASK = '/task',
     SHOWTASK = '/task/:id',
     ABOUT = '/about/*',
+    WHO = 'who',
     DASHBOARD = '/dashboard',
     CONTACT = '/contact',
     ERROR = '*',

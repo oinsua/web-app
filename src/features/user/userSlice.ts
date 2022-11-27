@@ -4,8 +4,8 @@ import { RootState } from "../../app/redux/store";
 
 export const initialState: User = {
     name: '',
-    permission: '',
-    rol: '',
+    permission: [],
+    rol: [],
 };
 
 export const userSlice = createSlice({
