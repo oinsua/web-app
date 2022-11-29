@@ -8,5 +8,6 @@ export enum GO_TO {
     DASHBOARD = '/dashboard',
     CONTACT = '/contact',
     ADMIN = '/admin',
+    CHAT = '/chat',
     ERROR = '*',
 };

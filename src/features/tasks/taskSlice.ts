@@ -2,24 +2,12 @@ import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../../app/redux/store';
 import { Tasks } from '../../model/Task';
 
-const initialState: Tasks[]  = [
+export const initialState: Tasks[]  = [
                                 {
-                                    id: "1",
-                                    name: "Javascript",
+                                    id: "",
+                                    name: "",
                                     status: "TODO",
-                                    time: 10
-                                },
-                                {
-                                    id: "2",
-                                    name: "Html",
-                                    status: "TODO",
-                                    time: 30
-                                },
-                                {
-                                    id: "3",
-                                    name: "Css",
-                                    status: "TODO",
-                                    time: 15
+                                    time: 0
                                 }
                             ];
                         
@@ -31,6 +19,9 @@ export const taskSlice = createSlice({
         createTask: (state, action) => {
             return [...state, action.payload];
         },
+        listTask: (state, action) => {
+            return action.payload;
+        },
         deleteTask: (state, action) => {
             const task = state.find(item => item.id === action.payload);
             if(task){
@@ -41,7 +32,7 @@ export const taskSlice = createSlice({
     }
 });
 
-export const { createTask, deleteTask } = taskSlice.actions
+export const { createTask, listTask, deleteTask } = taskSlice.actions
 
 export const getTask = (state: RootState) => state.tasks;
 

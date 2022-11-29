@@ -1,12 +1,13 @@
 import { useAppSelector } from '../../app/redux/hooks'
 import { getTask } from '../../features/tasks/taskSlice'
+import { useListTasks } from '../../hook/useListTask';
 import DeleteTask from '../DeleteTask';
 import UpdateTaks from '../UpdateTask';
 
 
 function TaskList() {
     const taksList = useAppSelector(getTask);
-
+    useListTasks();
   return (
     <>
      <h3>List of Tasks</h3>

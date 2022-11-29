@@ -3,6 +3,7 @@ import uuid from 'react-uuid';
 import { useAppDispatch } from '../../app/redux/hooks';
 import { initialState } from '../../features/dataForm/dataSlice';
 import { createTask } from '../../features/tasks/taskSlice';
+import { socket } from '../../sockets';
 import styles from './Task.module.css';
 import { actionButton, useDataForm } from './useDataForm';
 
@@ -28,7 +29,8 @@ function TaskForm() {
         e.preventDefault();
         if(task.id === '') dispatch(createTask({...task, id: uuid()}));
         else dispatch(createTask(task));
-        
+        const {name, status, time} = task;
+        socket.emit('client:createTask', {name, status, time});
         handleResetForm();
     };
 

@@ -13,6 +13,7 @@ import Login from "../login";
 import { useAppSelector } from "../../app/redux/hooks";
 import { getUser } from "../../features/user/userSlice";
 import Admin from "../Admin";
+import WebChat from "../webChat";
 
 function RouteApp() {
   const user = useAppSelector(getUser);
@@ -24,6 +25,7 @@ function RouteApp() {
       <Route path={GO_TO.HOME} element={<Home />}/>
       <Route path={GO_TO.TASK} element={<Task />}/>
       <Route path={GO_TO.SHOWTASK} element={<ShowTask/>} /> 
+      <Route path={GO_TO.CHAT} element={<WebChat/>} /> 
     </Route>
     <Route path={GO_TO.ABOUT} element={<About />}>
       <Route element={<ProtecterRouter isAllowed={user.name !== ''} url={GO_TO.ABOUT}/>}>
