@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { io } from "socket.io-client";
 import { useAppDispatch } from './hooks';
-import { listTask } from '../features/tasks/taskSlice';
+import { listTask } from "app/redux/features/tasks/taskSlice";;
 
 export function useListTasks() {
   const socket = io(process.env.REACT_APP_SOCKET_URL || '');
@@ -10,7 +10,7 @@ export function useListTasks() {
 
   useEffect(() => {
     socket.emit('client:listTasks', {});
-  },[]);
+  },[socket]);
 
   socket.on('server:listTasks', (list) => {
     console.log('lisTasks: ', list)

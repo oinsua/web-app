@@ -1,11 +1,12 @@
 import { useParams } from 'react-router-dom';
-import { useAppSelector } from '../../hook/hooks';
-import { getTask } from '../../features/tasks/taskSlice';
+import { useAppSelector } from 'hook/hooks';
+import { getTask } from 'app/redux/features/tasks/taskSlice';
+import { Tasks } from 'model/Task';
 
 function GetTask() {
-    const taksList = useAppSelector(getTask);
+    const taksList: Tasks | any = useAppSelector(getTask);
     const { id } = useParams();
-    const item = taksList.find((item) => item.id === id);
+    const item = taksList.find((item: Tasks) => item.id === id);
 
   return (
     <>

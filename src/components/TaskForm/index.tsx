@@ -1,8 +1,8 @@
 import React from 'react'
 import uuid from 'react-uuid';
-import { useAppDispatch } from '../../hook/hooks';
-import { initialState } from '../../features/dataForm/dataSlice';
-import { createTask } from '../../features/tasks/taskSlice';
+import { useAppDispatch } from 'hook/hooks';
+import { initialState } from 'app/redux/features/dataForm/dataSlice';
+import { createTask } from 'app/redux/features/tasks/taskSlice';
 import { socket } from '../../sockets';
 import styles from './Task.module.css';
 import { actionButton, useDataForm } from './useDataForm';

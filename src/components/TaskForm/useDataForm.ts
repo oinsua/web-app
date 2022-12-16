@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
-import { useAppSelector } from '../../hook/hooks';
-import { getDataForm, initialState } from '../../features/dataForm/dataSlice';
-import { Tasks } from '../../model/Task';
+import { useAppSelector } from 'hook/hooks';
+import { getDataForm, initialState } from 'app/redux/features/dataForm/dataSlice';
+import { Tasks } from 'model/Task';
 
 export enum actionButton {
     CREATE = 'Create',

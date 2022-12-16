@@ -1,8 +1,8 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../../features/counter/counterSlice';
-import taskReducer from '../../features/tasks/taskSlice';
-import dataFormReducer from '../../features/dataForm/dataSlice';
-import userReducer from '../../features/user/userSlice';
+import counterReducer from 'app/redux/features/counter/counterSlice';
+import taskReducer from 'app/redux/features/tasks/taskSlice';
+import dataFormReducer from 'app/redux/features/dataForm/dataSlice';
+import userReducer from 'app/redux/features/user/userSlice';
 
 export const store = configureStore({
   reducer: {

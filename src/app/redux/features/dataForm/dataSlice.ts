@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { RootState } from '../../app/redux/store';
-import { Tasks } from '../../model/Task';
+import { RootState } from 'app/redux/store';
+import { Tasks } from 'model/Task';
 
 
 

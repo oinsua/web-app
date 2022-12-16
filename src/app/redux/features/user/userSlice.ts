@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { User } from '../../model/User'
-import { RootState } from "../../app/redux/store";
+import { User } from 'model/User'
+import { RootState } from "app/redux/store";
 
 export const initialState: User = {
     name: '',

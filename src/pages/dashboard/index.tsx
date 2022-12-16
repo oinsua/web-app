@@ -1,4 +1,4 @@
-import { Counter } from '../../features/counter/Counter'
+import { Counter } from "app/redux/features/counter/Counter";
 import '../../App.css';
 import logo from '../../logo.svg';
 import PageLayout from '../../components/PageLayout';

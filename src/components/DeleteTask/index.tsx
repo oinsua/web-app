@@ -1,5 +1,5 @@
-import { useAppDispatch } from '../../hook/hooks';
-import { deleteTask } from '../../features/tasks/taskSlice';
+import { useAppDispatch } from 'hook/hooks';
+import { deleteTask } from 'app/redux/features/tasks/taskSlice';
 
 export type props = {
     id: string,

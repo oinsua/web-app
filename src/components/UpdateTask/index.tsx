@@ -1,7 +1,7 @@
-import { useAppDispatch } from '../../hook/hooks';
-import { updateData } from '../../features/dataForm/dataSlice';
-import { deleteTask } from '../../features/tasks/taskSlice';
-import { Tasks } from '../../model/Task';
+import { useAppDispatch } from 'hook/hooks';
+import { updateData } from "app/redux/features/dataForm/dataSlice";
+import { deleteTask } from "app/redux/features/tasks/taskSlice";
+import { Tasks } from 'model/Task';
 
 export type props = {
     task: Tasks
