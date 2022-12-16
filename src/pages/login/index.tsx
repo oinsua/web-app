@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import { useAppDispatch } from '../../app/redux/hooks';
+import { useAppDispatch } from '../../hook/hooks';
 import PageLayout from '../../components/PageLayout';
 import { addUser } from '../../features/user/userSlice';
 import { GO_TO } from '../../model/Routes';

@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { useAppSelector } from '../../app/redux/hooks';
+import { useAppSelector } from '../../hook/hooks';
 import { getTask } from '../../features/tasks/taskSlice';
 
 function GetTask() {

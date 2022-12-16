@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { useAppSelector } from '../../app/redux/hooks';
+import { useAppSelector } from '../../hook/hooks';
 import { getUser } from '../../features/user/userSlice';
 import { GO_TO } from '../../model/Routes';
 import styles from './css/navBar.module.css';

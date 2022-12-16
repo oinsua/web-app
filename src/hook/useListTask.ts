@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { io } from "socket.io-client";
-import { useAppDispatch } from '../app/redux/hooks';
+import { useAppDispatch } from './hooks';
 import { listTask } from '../features/tasks/taskSlice';
 
 export function useListTasks() {

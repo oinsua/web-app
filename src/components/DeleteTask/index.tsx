@@ -1,4 +1,4 @@
-import { useAppDispatch } from '../../app/redux/hooks';
+import { useAppDispatch } from '../../hook/hooks';
 import { deleteTask } from '../../features/tasks/taskSlice';
 
 export type props = {

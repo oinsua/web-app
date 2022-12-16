@@ -1,4 +1,4 @@
-import { useAppSelector } from '../../app/redux/hooks'
+import { useAppSelector } from '../../hook/hooks'
 import { getTask } from '../../features/tasks/taskSlice'
 import { useListTasks } from '../../hook/useListTask';
 import DeleteTask from '../DeleteTask';

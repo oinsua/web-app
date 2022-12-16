@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { GO_TO } from '../../model/Routes';
 import { addUser, getUser, initialState } from '../../features/user/userSlice';
-import { useAppDispatch, useAppSelector } from '../../app/redux/hooks';
+import { useAppDispatch, useAppSelector } from '../../hook/hooks';
 
 function ShowLoginLogout() {
     const userRedux = useAppSelector(getUser);
