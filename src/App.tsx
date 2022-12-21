@@ -6,6 +6,8 @@ import ShowLoginLogout from './components/ShowLoginLogout';
 
 
 function App() {
+   console.log('REACT_APP_VERSION: ', process.env.REACT_APP_VERSION);
+   console.log('REACT_APP_NAME: ', process.env.REACT_APP_NAME);
   return (
           <>
            <Helmet>

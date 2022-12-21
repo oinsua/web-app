@@ -2,8 +2,12 @@ import { Counter } from "app/redux/features/counter/Counter";
 import '../../App.css';
 import logo from '../../logo.svg';
 import PageLayout from '../../components/PageLayout';
+import { useAppSelector } from "hook/hooks";
+import { getPosts } from "app/redux/features/posts/postSlice";
 
 function Dashboard() {
+  const posts = useAppSelector(getPosts);
+  console.log('posts in dashboard: ', posts);
   return (
     <PageLayout>
       <div className="App">
