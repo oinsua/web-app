@@ -1,25 +1,16 @@
-import { BrowserRouter } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
-import RouteApp from './pages/routes';
-import ShowLoginLogout from './components/ShowLoginLogout';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 
 
 function App() {
-   console.log('REACT_APP_VERSION: ', process.env.REACT_APP_VERSION);
-   console.log('REACT_APP_NAME: ', process.env.REACT_APP_NAME);
   return (
-          <>
+          <HelmetProvider>
            <Helmet>
                 <meta charSet="utf-8" /> 
                 <title>Web Application</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
-           <BrowserRouter>
-              <ShowLoginLogout />
-              <RouteApp />
-           </BrowserRouter>
-          </>
+          </HelmetProvider>
  )
 }
 

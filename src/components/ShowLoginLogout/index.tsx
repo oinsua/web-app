@@ -17,7 +17,7 @@ function ShowLoginLogout() {
             rol: [],
         }))
         console.log('handleLogin')
-        navigate(GO_TO.TASK);
+        navigate(GO_TO.HOME);
     };
 
     const handleLogout = () => {
