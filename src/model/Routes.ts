@@ -10,6 +10,7 @@ export enum GO_TO {
     DASHBOARD = '/rol/dashboard',
     CONTACT = '/contact',
     ADMIN = '/rol/admin',
-    CHAT = '/chat',
+    CHAT = '/chat/:userId',
+    CHAT_EDIT = '/chat/:userId/edit',
     ERROR = '*',
 };

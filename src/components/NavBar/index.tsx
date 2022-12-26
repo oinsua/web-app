@@ -46,7 +46,7 @@ function NavBar() {
                                     <NavLink to={GO_TO.CONTACT} className={handleCss}>Contact</NavLink>
                                 </li>
                                 <li className={styles.li_list}>
-                                    <NavLink to={GO_TO.CHAT} className={handleCss}>Chat</NavLink>
+                                    <NavLink to={`/chat/${1}`} className={handleCss}>Chat</NavLink>
                                 </li>
                                 {
                                     userRedux.permission.includes('analize' as never) && (

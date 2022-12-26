@@ -2,6 +2,7 @@ import {  Navigate } from "react-router-dom";
 import { GO_TO } from "../../model/Routes";
 import React from 'react';
 import { AllowedValue } from "components/ProtectedRouter";
+import { actionUser, loaderUser } from "services/loaderServices";
 
 const Home = React.lazy(() => import('pages/home'));
 const Task = React.lazy(() => import('pages/Task'));
@@ -14,6 +15,7 @@ const Who = React.lazy(() => import('pages/who'));
 const Login = React.lazy(() => import('pages/login'));
 const Admin = React.lazy(() => import('pages/Admin'));
 const WebChat = React.lazy(() => import('pages/webChat'));
+const UserEdit = React.lazy(() => import('components/userEdit'));
 const ProtecterRouter = React.lazy(() => import('components/ProtectedRouter'));
 const ShowLoginLogout = React.lazy(() => import('components/ShowLoginLogout'));
 
@@ -36,22 +38,25 @@ export const routes = [
       {
         path: GO_TO.HOME,
         element: <Home />,
-        errorElement: <ErrorPage/>
       },
       {
         path: GO_TO.TASK,
         element: <Task />,
-        errorElement: <ErrorPage/>
       },
       {
         path: GO_TO.SHOWTASK,
         element: <ShowTask />,
-        errorElement: <ErrorPage/>
       },
       {
         path: GO_TO.CHAT,
         element: <WebChat />,
-        errorElement: <ErrorPage/>
+        loader: loaderUser
+      },
+      {
+        path: GO_TO.CHAT_EDIT,
+        element: <UserEdit />,
+        loader: loaderUser,
+        action: actionUser,
       },
     ],
   },
@@ -63,12 +68,10 @@ export const routes = [
       {
         path: GO_TO.P_WHO,
         element: <ProtecterRouter isAllowed={AllowedValue.All} url={GO_TO.ABOUT}/>,
-        errorElement: <ErrorPage/>,
         children: [
           {
             path: GO_TO.WHO,
             element: <Who/>,
-            errorElement: <ErrorPage/>
           }
         ],
       },
@@ -97,7 +100,6 @@ export const routes = [
       {
         path: GO_TO.DASHBOARD,
         element:  <Dashboard />,
-        errorElement: <ErrorPage/>,
       }
     ]
   },
@@ -109,7 +111,6 @@ export const routes = [
       {
         path: GO_TO.ADMIN,
         element:  <Admin />,
-        errorElement: <ErrorPage/>,
       }
     ]
   },

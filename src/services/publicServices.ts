@@ -5,11 +5,11 @@ import { Posts } from '../model/Posts';
 
 export const getUser = () => {
     const controller = loadAbort();
-    return { call: axios.get<User>('https://jsonplaceholder.typicode.com/posts', { signal: controller.signal }), controller };
+    return { call: axios.get<User>('https://jsonplaceholder.typicode.com/users', { signal: controller.signal }), controller };
   };
 
 export const getPost = () => {
     const controller = loadAbort();
     return { call: axios.get<Posts>('https://jsonplaceholder.typicode.com/posts', { signal: controller.signal }), controller };
-  };
+};
 
