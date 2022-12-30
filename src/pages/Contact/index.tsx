@@ -1,3 +1,4 @@
+import Calendar from 'components/Calendar';
 import PageLayout from '../../components/PageLayout';
 import styles from './css/contact.module.css';
 
@@ -59,6 +60,7 @@ return (
             </div> 
             </div> 
         </div>
+        <Calendar />
     </PageLayout>
 );
 }
