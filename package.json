@@ -1,6 +1,6 @@
 {
   "name": "web-app",
-  "version": "1.1.1",
+  "version": "0.0.0",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.0",
@@ -26,6 +26,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "major": "npm version major",
     "build": "genversion --es6 src/lib/version.js && react-scripts build",
     "build2": "react-scripts build && REACTBUILDVERSION=$(date +%Y-%m-%d)-$(date +%T) && sed -i -- 's/%REACTBUILDVERSION%/'$REACTBUILDVERSION'/g' build/index.html && echo React Build Version = $REACTBUILDVERSION",
     "test": "react-scripts test",
