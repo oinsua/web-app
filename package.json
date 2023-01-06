@@ -12,6 +12,7 @@
     "@types/react-dom": "^18.0.9",
     "axios": "^1.2.1",
     "classnames": "^2.3.2",
+    "cross-env": "^7.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet-async": "^1.3.0",
@@ -26,7 +27,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "major": "npm version major --verbose",
+    "major": "npm version major --verbose && cross-env REACTBUILDVERSION=$REACT_APP_VERSION && sed -i -- 's/%REACTBUILDVERSION%/'$REACTBUILDVERSION'/g' build/index.html && echo React Build Version = $REACTBUILDVERSION", 
     "build": "genversion --es6 src/lib/version.js && react-scripts build",
     "build2": "react-scripts build && REACTBUILDVERSION=$(date +%Y-%m-%d)-$(date +%T) && sed -i -- 's/%REACTBUILDVERSION%/'$REACTBUILDVERSION'/g' build/index.html && echo React Build Version = $REACTBUILDVERSION",
     "test": "react-scripts test",
