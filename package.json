@@ -27,10 +27,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "version" : "VERSION=$npm_package_version && sed -i -- 's/%VERSION%/'$VERSION'/g' build/index.html && echo React Build Version = $VERSION",
+    "date" : "DATE=$(date +%Y-%m-%d)-$(date +%T) && sed -i -- 's/%DATE%/'$DATE'/g' build/index.html && echo React Date = $DATE",
+    "version-date": "VERSION=$npm_package_version DATE=$(date +%Y-%m-%d)-$(date +%T) && sed -i -- 's/%VERSION%/'$VERSION'/g' build/index.html && sed -i -- 's/%DATE%/'$DATE'/g' build/index.html && echo React Build Version = $VERSION -- React Date = $DATE",
     "major": "npm version major && react-scripts build && REACTBUILDATE=$(date +%Y-%m-%d)-$(date +%T) REACTBUILDVERSION=1.2.3 && sed -i -- 's/%REACTBUILDATE%/'$REACTBUILDATE'/g' sed -i -- 's/%REACTBUILVERSION%/'$REACTBUILVERSION'/g' build/index.html && echo React Build DATE = $REACTBUILDATE && echo React Build VERSION = $REACTBUILDVERSION",
     "build": "genversion --es6 src/lib/version.js && react-scripts build",
-    "build2": "react-scripts build && REACTBUILDVERSION=$(date +%Y-%m-%d)-$(date +%T) && sed -i -- 's/%REACTBUILDVERSION%/'$REACTBUILDVERSION'/g' build/index.html && echo React Build Version = $REACTBUILDVERSION",
-    "minor": "npm version minor",
+    "build2": "react-scripts build && npm run version && npm run date",
+    "minor": "react-scripts build && REACTBUILDVERSION=$(date +%Y-%m-%d)-$(date +%T) && sed -i -- 's/%REACTBUILDVERSION%/'$REACTBUILDVERSION'/g' build/index.html && echo React Build Version = $REACTBUILDVERSION",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
