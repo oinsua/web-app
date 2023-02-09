@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { Provider } from 'react-redux'
-import { store } from '../../app/redux/store'
+import { setupStore } from '../../app/redux/store'
 
 import GetTask from './index'
 
@@ -8,7 +8,7 @@ describe("GetTask", () => {
 
     beforeEach(() => {
         render(
-            <Provider store={store}>
+            <Provider store={setupStore()}>
                 <GetTask />
             </Provider>
         )

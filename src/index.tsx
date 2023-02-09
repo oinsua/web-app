@@ -1,7 +1,7 @@
 import React, {Suspense} from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider} from 'react-redux';
-import { store } from './app/redux/store';
+import { setupStore } from './app/redux/store';
 import App from './App';
 import './index.css';
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
@@ -12,7 +12,7 @@ const root = createRoot(container);
 const router = createBrowserRouter(routes);
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <Provider store={setupStore()}>
       <Suspense fallback={<div>Loading...</div>}>
         <RouterProvider router={router} fallbackElement={<div>Loading Routes..</div>}/>
         <App/>
