@@ -19,6 +19,6 @@ describe('Contact', () => {
 
   test('Contact', () => {
     expect(screen.getByText(/Pepe/)).toBeInTheDocument();
-})
+  })
 
 });

@@ -35,7 +35,8 @@
     "build2": "react-scripts build && npm run version && npm run date",
     "minor": "react-scripts build && REACTBUILDVERSION=$(date +%Y-%m-%d)-$(date +%T) && sed -i -- 's/%REACTBUILDVERSION%/'$REACTBUILDVERSION'/g' build/index.html && echo React Build Version = $REACTBUILDVERSION",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
